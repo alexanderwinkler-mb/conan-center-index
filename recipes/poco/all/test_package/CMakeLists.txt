@@ -49,6 +49,7 @@ endif()
 add_executable(core test_core.cpp)
 target_link_libraries(core PRIVATE Poco::Foundation)
 target_compile_features(core PRIVATE ${POCO_CXX_STD})
+add_test(NAME core COMMAND core)
 
 if(TEST_UTIL)
     add_executable(util test_util.cpp)
